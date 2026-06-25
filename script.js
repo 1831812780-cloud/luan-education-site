@@ -92,6 +92,25 @@ numberItems.forEach((item) => numberObserver.observe(item));
 let activeSlide = 0;
 
 if (heroSlides.length > 1) {
+  const prefersMobileHero = window.matchMedia("(max-width: 720px)").matches;
+  const heroImageKey = prefersMobileHero ? "mobileSrc" : "desktopSrc";
+
+  heroSlides.forEach((slide, index) => {
+    const imageUrl = slide.dataset[heroImageKey] || slide.dataset.desktopSrc;
+    if (!imageUrl) return;
+
+    if (index === 0) {
+      slide.style.backgroundImage = `url("${imageUrl}")`;
+      return;
+    }
+
+    const image = new Image();
+    image.onload = () => {
+      slide.style.backgroundImage = `url("${imageUrl}")`;
+    };
+    image.src = imageUrl;
+  });
+
   setInterval(() => {
     heroSlides[activeSlide].classList.remove("is-active");
     activeSlide = (activeSlide + 1) % heroSlides.length;
