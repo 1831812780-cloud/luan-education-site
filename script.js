@@ -95,25 +95,40 @@ if (heroSlides.length > 1) {
   const prefersMobileHero = window.matchMedia("(max-width: 720px)").matches;
   const heroImageKey = prefersMobileHero ? "mobileSrc" : "desktopSrc";
 
-  heroSlides.forEach((slide, index) => {
+  const loadHeroSlide = (index) => {
+    const slide = heroSlides[index];
+    if (!slide || slide.dataset.loaded === "true") return;
+
     const imageUrl = slide.dataset[heroImageKey] || slide.dataset.desktopSrc;
     if (!imageUrl) return;
 
     if (index === 0) {
       slide.style.backgroundImage = `url("${imageUrl}")`;
+      slide.dataset.loaded = "true";
       return;
     }
 
     const image = new Image();
     image.onload = () => {
       slide.style.backgroundImage = `url("${imageUrl}")`;
+      slide.dataset.loaded = "true";
     };
     image.src = imageUrl;
-  });
+  };
+
+  loadHeroSlide(0);
 
   setInterval(() => {
     heroSlides[activeSlide].classList.remove("is-active");
     activeSlide = (activeSlide + 1) % heroSlides.length;
+    loadHeroSlide(activeSlide);
     heroSlides[activeSlide].classList.add("is-active");
+    window.setTimeout(() => {
+      loadHeroSlide((activeSlide + 1) % heroSlides.length);
+    }, 900);
   }, 4000);
+
+  window.setTimeout(() => {
+    loadHeroSlide(1);
+  }, 1200);
 }
