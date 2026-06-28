@@ -13,14 +13,14 @@
   <body>
     <header class="site-header" data-elevated="false">
       <a class="brand" href="#top" aria-label="返回首页">
-        <img src="./公司网站资料/公司品牌logo/庐安—横版/黑色的横板“庐安”.png" alt="庐安" />
+        <img fetchpriority="high" src="./公司网站资料/公司品牌logo/庐安—横版/黑色的横板“庐安”.png" alt="庐安" />
       </a>
       <nav class="desktop-nav" aria-label="主要导航">
         <a href="#founder">创始人</a>
         <a href="#philosophy">教育理念</a>
         <a href="#about">品牌故事</a>
         <a href="#programs">教育实践</a>
-        <a href="#journal">雪娇笔记</a>
+        <a href="./journal/learning.html">雪娇笔记</a>
         <a href="#letter">写给家长</a>
       </nav>
       <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false">
@@ -34,8 +34,8 @@
       <a href="#philosophy" onclick="closeMobileNav()">教育理念</a>
       <a href="#about" onclick="closeMobileNav()">品牌故事</a>
       <a href="#programs" onclick="closeMobileNav()">教育实践</a>
-      <a href="#stories" onclick="closeMobileNav()">真实故事</a>
-      <a href="#journal" onclick="closeMobileNav()">雪娇笔记</a>
+      <a href="./stories/li-yi.html" onclick="closeMobileNav()">真实故事</a>
+      <a href="./journal/study-trip.html" onclick="closeMobileNav()">雪娇笔记</a>
       <a href="#letter" onclick="closeMobileNav()">写给家长</a>
     </nav>
 
@@ -45,22 +45,22 @@
           <div
             class="hero-slide is-active"
             data-mobile-src="./assets/optimized/hero/mobile-hq/1.jpg"
-            data-desktop-src="./公司网站资料/首页背景/1.png"
+            data-desktop-src="./assets/optimized/hero/desktop/1.jpg"
           ></div>
           <div
             class="hero-slide"
             data-mobile-src="./assets/optimized/hero/mobile-hq/2.jpg"
-            data-desktop-src="./公司网站资料/首页背景/2.png"
+            data-desktop-src="./assets/optimized/hero/desktop/2.jpg"
           ></div>
           <div
             class="hero-slide"
             data-mobile-src="./assets/optimized/hero/mobile-hq/3.jpg"
-            data-desktop-src="./公司网站资料/首页背景/3.png"
+            data-desktop-src="./assets/optimized/hero/desktop/3.jpg"
           ></div>
           <div
             class="hero-slide"
             data-mobile-src="./assets/optimized/hero/mobile-hq/4.jpg"
-            data-desktop-src="./公司网站资料/首页背景/4.png"
+            data-desktop-src="./assets/optimized/hero/desktop/4.jpg"
           ></div>
         </div>
         <div class="hero-scrim"></div>
@@ -83,11 +83,11 @@
 
       <section id="founder" class="founder-section">
         <div class="founder-photo reveal">
-          <img
-            src="./公司网站资料/个人照片/个人形象照片.png"
-            alt="朱雪娇个人形象照片"
-            loading="lazy"
-          />
+            <img
+              src="./公司网站资料/个人照片/个人形象照片.png"
+              alt="朱雪娇个人形象照片"
+              loading="lazy" decoding="async"
+            />
         </div>
         <article class="founder-copy reveal">
           <p class="section-label">FOUNDER</p>
@@ -135,28 +135,28 @@
         </div>
         <div class="principle-grid">
           <article class="principle reveal">
-            <img src="./公司网站资料/研学照片/IMG_7089.PNG" alt="" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/IMG_7089.PNG" alt="" loading="lazy" decoding="async" />
             <div class="principle-index">01</div>
             <span>See</span>
             <h3>看见</h3>
             <p>每一个孩子都有自己的成长节奏。教育首先是理解，而不是定义。</p>
           </article>
           <article class="principle reveal">
-            <img src="./公司网站资料/研学照片/安全感、表达和自我理解的配图.PNG" alt="" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/安全感、表达和自我理解的配图.PNG" alt="" loading="lazy" decoding="async" />
             <div class="principle-index">02</div>
             <span>Support</span>
             <h3>陪伴</h3>
             <p>成长需要耐心。真正的教育，是长期陪伴。</p>
           </article>
           <article class="principle reveal">
-            <img src="./公司网站资料/研学照片/博物馆课堂.png" alt="" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/博物馆首页配图.jpg" alt="" loading="lazy" decoding="async" />
             <div class="principle-index">03</div>
             <span>Explore</span>
             <h3>探索</h3>
             <p>真实世界，是孩子最好的课堂。研学不仅是旅行，更是认知世界。</p>
           </article>
           <article class="principle reveal">
-            <img src="./公司网站资料/研学照片/科技馆研学（科技馆配图）.png" alt="" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/科技馆首页配图.png" alt="" loading="lazy" decoding="async" />
             <div class="principle-index">04</div>
             <span>Inspire</span>
             <h3>激发</h3>
@@ -170,7 +170,7 @@
           class="about-bg"
           src="./公司网站资料/为什么叫庐安配图（16：9 占满）.png"
           alt="庐安品牌意象"
-          loading="lazy"
+          loading="lazy" decoding="async"
         />
         <div class="about-copy reveal">
           <p class="section-label">ABOUT LUAN</p>
@@ -188,11 +188,13 @@
           <h2>教育实践，不是服务列表，而是一组真实发生的成长现场。</h2>
         </div>
         <div class="program-grid">
-          <a class="program-card large reveal" href="#stories">
+          <a class="program-card large reveal" href="./cases/beijing.html">
             <img
-              src="./公司网站资料/研学照片/北京研学无logo.png"
+              src="./assets/content/研学照片/北京励志研学配图/图1.jpg"
               alt="北京励志研学场景"
-              loading="lazy"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
             />
             <div>
               <p>北京励志研学</p>
@@ -200,11 +202,12 @@
               <span>进入项目故事</span>
             </div>
           </a>
-          <a class="program-card reveal" href="#stories">
+          <a class="program-card reveal" href="./cases/museum.html">
             <img
-              src="./公司网站资料/研学照片/博物馆课堂.png"
+              src="./assets/content/研学照片/博物馆学习计划配图/图1.png"
               alt="博物馆课堂"
               loading="lazy"
+              decoding="async"
             />
             <div>
               <p>博物馆学习计划</p>
@@ -212,11 +215,12 @@
               <span>阅读案例</span>
             </div>
           </a>
-          <a class="program-card reveal" href="#stories">
+          <a class="program-card reveal" href="./cases/tech.html">
             <img
-              src="./公司网站资料/研学照片/科技馆研学（科技馆配图）.png"
+              src="./assets/content/研学照片/科技馆研学配图/图1.png"
               alt="科技馆研学"
               loading="lazy"
+              decoding="async"
             />
             <div>
               <p>科技馆研学</p>
@@ -224,11 +228,12 @@
               <span>阅读案例</span>
             </div>
           </a>
-          <a class="program-card reveal" href="#stories">
+          <a class="program-card reveal" href="./cases/psychology.html">
             <img
-              src="./公司网站资料/研学照片/篝火晚会.png"
+              src="./assets/content/研学照片/篝火晚会.png"
               alt="成长课程学习场景"
               loading="lazy"
+              decoding="async"
             />
             <div>
               <p>心理成长课程</p>
@@ -236,11 +241,12 @@
               <span>阅读案例</span>
             </div>
           </a>
-          <a class="program-card reveal" href="#journal">
+          <a class="program-card reveal" href="./cases/ai.html">
             <img
-              src="./公司网站资料/研学照片/IMG_7085.jpg"
+              src="./assets/content/研学照片/IMG_7085.jpg"
               alt="AI学习力工作坊"
               loading="lazy"
+              decoding="async"
             />
             <div>
               <p>AI学习力工作坊</p>
@@ -258,27 +264,27 @@
         </div>
         <div class="places-grid">
           <article class="place-card reveal">
-            <img src="./公司网站资料/研学照片/北京.jpg" alt="北京研学地点" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/北京.jpg" alt="北京研学地点" loading="lazy" decoding="async" />
             <span>BEIJING</span>
             <h3>北京</h3>
           </article>
           <article class="place-card reveal">
-            <img src="./公司网站资料/研学照片/井冈山.jpg" alt="井冈山研学地点" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/井冈山.jpg" alt="井冈山研学地点" loading="lazy" decoding="async" />
             <span>JINGGANGSHAN</span>
             <h3>井冈山</h3>
           </article>
           <article class="place-card reveal">
-            <img src="./公司网站资料/研学照片/婺源.jpg" alt="婺源研学地点" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/婺源.jpg" alt="婺源研学地点" loading="lazy" decoding="async" />
             <span>WUYUAN</span>
             <h3>婺源</h3>
           </article>
           <article class="place-card reveal">
-            <img src="./公司网站资料/研学照片/景德镇.jpg" alt="景德镇研学地点" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/景德镇.jpg" alt="景德镇研学地点" loading="lazy" decoding="async" />
             <span>JINGDEZHEN</span>
             <h3>景德镇</h3>
           </article>
           <article class="place-card reveal">
-            <img src="./公司网站资料/研学照片/望仙谷.jpg" alt="望仙谷研学地点" loading="lazy" />
+            <img fetchpriority="low" src="./assets/content/研学照片/望仙谷.jpg" alt="望仙谷研学地点" loading="lazy" decoding="async" />
             <span>WANGXIANGU</span>
             <h3>望仙谷</h3>
           </article>
@@ -333,9 +339,9 @@
       <section id="letter" class="letter-section">
         <div class="letter-photo reveal">
           <img
-            src="./公司网站资料/研学照片/写给家长配图.png"
+            src="./assets/content/研学照片/写给家长配图.png"
             alt="自然光下的成长教育场景"
-            loading="lazy"
+            loading="lazy" decoding="async"
           />
         </div>
         <article class="letter-copy reveal">

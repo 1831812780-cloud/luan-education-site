@@ -1,0 +1,10 @@
+.DS_Store
+*.docx
+company/
+公司/公司网站资料/**/*.docx
+公司/公司网站资料/**/*.DS_Store
+公司/**/.DS_Store
+公司网站资料/**/*.DS_Store
+assets/content/**/.DS_Store
+assets/optimized/**/.DS_Store
+archive/
